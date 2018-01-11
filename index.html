@@ -3,11 +3,13 @@
     <head>
         <title>Weather App</title>
         <link rel="stylesheet" href="css.css" type="text/css">
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
     <body>
        
         <header>
-            <h1>The Super Awesome Weather App</h1>
+            <h1>Is it Brick out?</h1>
+            <i class="fa fa-thermometer-2 2x" aria-hidden="true"></i>
         </header>
         
         <div class="main">
@@ -18,10 +20,24 @@
             </div>
             
             <div id="load">Loading...</div>
-            <div id="weather">
+            <div id="weather" class="clearfix">
                 <h1 id="weatherCity">City Name</h1>
                 <div id="weatherDescription">Weather Description</div>
                 <div id="weatherTemperature">Temperature</div>
+            </div>
+            
+            <div class="indicatorHot">
+                <div> Go Outside! Make some friends. </div>
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+            </div>
+            
+            <div class="indicatorCold">
+                <div> Yo! It's brick. Stay home.</div>
+                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
             </div>
         </div>
         <script src="init.js"></script>

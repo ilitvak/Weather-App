@@ -6,6 +6,8 @@ function searchWeather() {
     
     loadingText.style.display = 'block';
     weather.style.display = "none";
+    indicatorCold.style.display = "none";
+    indicatorHot.style.display = "none";
     
     var cityName = searchCity.value;
     
@@ -25,10 +27,12 @@ function searchWeather() {
         if(http.readyState === XMLHttpRequest.DONE && http.status === 200){
             var data = JSON.parse(http.responseText);
             var weatherData = new Weather(cityName, data.weather[0].description.toUpperCase());
+            
             weatherData.temperature = data.main.temp;
             
             updateWeather(weatherData);
         } 
+        
         else if(http.readyState === XMLHttpRequest.DONE ){
             alert("Something went wrong!");
         }
@@ -44,6 +48,9 @@ function updateWeather(weatherData) {
     
     loadingText.style.display = 'none';
     weather.style.display = "block";
+
+    weatherData.temperature < 10 ? indicatorCold.style.display = 'block' : "none";
+    weatherData.temperature > 30 ? indicatorHot.style.display = 'block' : "none";
 }
     
  

@@ -13,19 +13,41 @@
     font-family: Helvetica Neue, Helvetica, Arial;
 }
 
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
 header {
     padding: 2% 0;
     height: auto;
-    background-color: lightblue;
+    background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
     text-align: center;
     box-shadow: 3px 3px 3px #ccc;
 }
 
 header h1 {
+    display: inline-block;
     margin: 0;
     font-size: 40px;
     font-weight: bold;
-    color: dodgerblue;
+    color: #fff;
+}
+
+header i.fa-thermometer-2, 
+.fa-snowflake-o,
+.fa-sun-o {
+    display: inline-block;
+    margin-left: 1%;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.fa-sun-o {
+    color: yellow;
 }
 
 .main {
@@ -42,9 +64,25 @@ header h1 {
 }
 
 #search input {
-    border: 1px solid gray;
+    border-bottom: 2px solid #000;
     font-size: inherit;
     font-family: inherit;
+}
+
+#search input::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    transition: width .5s;
+    background-color: blue;
+}
+
+#search input:focus::after {
+    width: 100%;
+}
+#search input:focus {
+    outline: none;
 }
 
 #search button {
@@ -53,7 +91,7 @@ header h1 {
     border-radius: 4px;
     font-family: inherit;
     font-size: inherit;
-    background-color: dodgerblue;
+    background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
     cursor: pointer;
     color: white;
 }
@@ -62,16 +100,28 @@ header h1 {
     background-color: deepskyblue;
 }
 
-#weather {
+#weather, .indicatorCold, .indicatorHot {
     display: none;
     padding: 30px;
     border: 1px solid #ccc;
-    margin: 100px auto auto;
+    margin: 100px auto 50px;
     width: 500px;
-    background-color: deepskyblue;
+    background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
     box-shadow: 2px 2px 3px #ccc;
     color: white;
     font-weight: bold;
+}
+
+.indicatorCold, .indicatorHot {
+    margin-top: 0;
+}
+
+.indicatorCold > div {
+    display: inline-block;
+}
+
+.indicatorHot > div {
+    display: inline-block;
 }
 
 #weather h1 {

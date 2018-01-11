@@ -8,3 +8,6 @@ var weather = document.querySelector("#weather");
 var weatherCity = document.querySelector("#weatherCity");
 var weatherDesc = document.querySelector("#weatherDescription");
 var weatherTemp = document.querySelector("#weatherTemperature");
+
+var indicatorCold = document.querySelector('.indicatorCold');
+var indicatorHot = document.querySelector('.indicatorHot');
