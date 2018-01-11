@@ -1,0 +1,96 @@
+/* ---------------------------- */
+/* Basic Setup */
+/* ---------------------------- */
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all .5s;
+    font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+header {
+    padding: 2% 0;
+    height: auto;
+    background-color: lightblue;
+    text-align: center;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+.main {
+    text-align: center;
+    padding-top: 80px;
+}
+
+#search {
+    font-size: 18px;
+}
+
+#search label {
+    font-weight: bold;
+}
+
+#search input {
+    border: 1px solid gray;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#search button {
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: dodgerblue;
+    cursor: pointer;
+    color: white;
+}
+
+#search button:hover {
+    background-color: deepskyblue;
+}
+
+#weather {
+    display: none;
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin: 100px auto auto;
+    width: 500px;
+    background-color: deepskyblue;
+    box-shadow: 2px 2px 3px #ccc;
+    color: white;
+    font-weight: bold;
+}
+
+#weather h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#weatherDescription {
+    float: left;
+}
+
+#weatherTemperature {
+    float: right;
+}
+
+#load {
+    display: none;
+    padding: 30px;
+    margin: 100px auto auto;
+    width: 500px;
+}
