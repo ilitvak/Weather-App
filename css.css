@@ -63,6 +63,7 @@ header i.fa-thermometer-2,
     border-bottom: 2px solid #000;
     font-size: inherit;
     font-family: inherit;
+    outline: none;
 }
 
 #search input::after {
@@ -175,6 +176,7 @@ header i.fa-thermometer-2,
         margin: 4% auto 8%;
         width: 90%;
         font-size: 1.2em;
+        text-transform: uppercase;
     }
     
     #search button {
