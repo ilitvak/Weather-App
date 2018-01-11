@@ -3,6 +3,10 @@
 searchButton.addEventListener("click", searchWeather);
 
 function searchWeather() {
+    
+    loadingText.style.display = 'block';
+    weather.style.display = "none";
+    
     var cityName = searchCity.value;
     
     // trim() function removes any whitespaces entered.
@@ -38,6 +42,7 @@ function updateWeather(weatherData) {
     weatherDescription.textContent = weatherData.description;
     weatherTemp.textContent = weatherData.temperature;
     
+    loadingText.style.display = 'none';
     weather.style.display = "block";
 }
     
