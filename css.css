@@ -20,7 +20,7 @@
 }
 
 header {
-    padding: 2% 0;
+    padding: 4% 0;
     height: auto;
     background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
     text-align: center;
@@ -53,10 +53,6 @@ header i.fa-thermometer-2,
 .main {
     text-align: center;
     padding-top: 80px;
-}
-
-#search {
-    font-size: 18px;
 }
 
 #search label {
@@ -93,11 +89,12 @@ header i.fa-thermometer-2,
     font-size: inherit;
     background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
     cursor: pointer;
+    outline: none;
     color: white;
 }
 
 #search button:hover {
-    background-color: deepskyblue;
+    background-image: linear-gradient(278deg, #00C4CC 0%, #7D2AE8 100%);
 }
 
 #weather, .indicatorCold, .indicatorHot {
@@ -143,4 +140,62 @@ header i.fa-thermometer-2,
     padding: 30px;
     margin: 100px auto auto;
     width: 500px;
+}
+
+/* ---------------------------- */
+/* Media Queries */
+/* ---------------------------- */
+
+@media only screen and (max-width: 480px) {
+    
+    header h1 {
+        font-size: 2.5em;
+    }
+    
+    header i.fa-thermometer-2 {
+        font-size: 2.5em;
+    }
+    
+    header i.fa-thermometer-2, .fa-snowflake-o, .fa-sun-o {
+        height: auto;
+    }
+    
+    #search {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    #search label {
+        display: block;
+        font-size: 1.8em;
+    }
+
+    #search input {
+        display: block;
+        margin: 4% auto 8%;
+        width: 90%;
+        font-size: 1.2em;
+    }
+    
+    #search button {
+        padding: 2.2%;
+        font-size: 1.4em;
+    }
+    
+    #load {
+        width: auto;
+    }
+    
+    #weather, .indicatorCold, .indicatorHot {
+        width: 100%;
+    }
+    
+    .indicatorCold, .indicatorHot {
+        margin-bottom: 0;
+    }
+    
+    #weatherDescription, #weatherTemperature {
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
 }
