@@ -68,18 +68,6 @@ header i.fa-thermometer-2,
     outline: none;
 }
 
-#search input::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    transition: width .5s;
-    background-color: blue;
-}
-
-#search input:focus::after {
-    width: 100%;
-}
 #search input:focus {
     outline: none;
 }

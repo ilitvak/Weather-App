@@ -1,0 +1,112 @@
+/* ---------------------------- */
+/* Basic Setup */
+/* ---------------------------- */
+
+$bb: border-box;
+$gradient : linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
+$text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    -webkit-box-sizing: $bb;
+    -ms-box-sizing: $bb;
+    box-sizing: $bb;
+    transition: all .5s;
+    font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* ---------------------------- */
+/* Header Section */
+/* ---------------------------- */
+
+
+header {
+    height: auto;
+    padding: 4% 0;
+    background-image: $gradient;
+    text-align: center;
+    box-shadow: 3px 3px 3px #ccc;
+    
+    h1 {
+        display: inline-block;
+        margin: 0;
+        font-weight: bold;
+        font-size: calc(1.4em + 2.5vw);
+        text-shadow: $text-shadow;
+        color: #fff;
+    }
+    
+    i.fa-thermometer-2 {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 1%;
+        color: #ffffff;
+        font-size: calc(1em + 2.2vw);
+        text-shadow: $text-shadow;
+    }
+}
+
+/* ---------------------------- */
+/* Main Weather Section */
+/* ---------------------------- */
+
+main {
+    text-align: center;
+    padding-top: 80px;
+    
+    #search {
+        label {
+            font-weight: bold;
+        }
+        
+        input {
+            border-bottom: 2px solid #000;
+            font-size: inherit;
+            font-family: inherit;
+            outline: none;
+            
+            &:focus {
+                outline: none;
+            }
+        }
+        
+        button {
+            padding: 5px;
+            border: 1px solid;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: inherit;
+            font-size: inherit;
+            color: #fff;
+            text-shadow: $text-shadow;
+            background-image: $gradient;
+            outline: none;
+            
+            &:hover {
+                background-image: linear-gradient(278deg, #00C4CC 0%, #7D2AE8 100%);
+            }
+        }
+    }
+    
+    #weather, .indicatorCold, .indicatorHot {
+        display: none;
+        padding: 30px;
+        width: 500px;
+        border: 1px solid #ccc;
+        margin: 100px auto 50px;
+        box-shadow: 2px 2px 3px #ccc;
+        font-weight: bold;
+        color: #fff;
+        background-image: $gradient;
+    }
+}

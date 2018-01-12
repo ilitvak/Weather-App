@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Weather App</title>
-        <link rel="stylesheet" href="./styles/css.css" type="text/css">
+        <link rel="stylesheet" href="./scss/scss.css" type="text/css">
         <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
@@ -12,7 +12,7 @@
             <i class="fa fa-thermometer-2 2x" aria-hidden="true"></i>
         </header>
         
-        <div class="main">
+        <main>
             <div id="search">
                 <label for="city">Enter City Name</label>
                 <input type="text" id="city">
@@ -39,7 +39,8 @@
                 <i class="fa fa-snowflake-o" aria-hidden="true"></i>
                 <i class="fa fa-snowflake-o" aria-hidden="true"></i>
             </div>
-        </div>
+        </main>
+        
         <script src="init.js"></script>
         <script src="weather-data.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js'></script>
