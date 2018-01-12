@@ -96,7 +96,7 @@ main {
     width: 500px;
     border: 1px solid #ccc;
     margin: 100px auto 50px;
-    box-shadow: 2px 2px 3px #ccc;
+    box-shadow: 0em 0.2em 1em rgba(0, 0, 0, 0.8);
     font-weight: bold;
     color: #fff;
     background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%); }
@@ -116,7 +116,7 @@ main {
     width: 20px;
     height: auto;
     margin-left: 1%;
-    color: yellow;
+    color: #00FFFF;
     text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
 
 /* ---------------------------- */
