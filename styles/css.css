@@ -30,7 +30,8 @@ header {
 header h1 {
     display: inline-block;
     margin: 0;
-    font-size: 40px;
+    font-size: calc(1.4em + 2.5vw);
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
     font-weight: bold;
     color: #fff;
 }
@@ -43,7 +44,8 @@ header i.fa-thermometer-2,
     width: 20px;
     height: 20px;
     color: #ffffff;
-    font-size: 40px;
+    font-size: calc(1em + 2.2vw);
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
 }
 
 .fa-sun-o {
@@ -88,13 +90,15 @@ header i.fa-thermometer-2,
     border-radius: 4px;
     font-family: inherit;
     font-size: inherit;
+    font-weight: bold;
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
     background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
     cursor: pointer;
     outline: none;
     color: white;
 }
 
-#search button:hover {
+#search button:hover {  
     background-image: linear-gradient(278deg, #00C4CC 0%, #7D2AE8 100%);
 }
 
@@ -130,6 +134,7 @@ header i.fa-thermometer-2,
 
 #weatherDescription {
     float: left;
+    text-transform: uppercase;
 }
 
 #weatherTemperature {
@@ -198,6 +203,5 @@ header i.fa-thermometer-2,
     
     #weatherDescription, #weatherTemperature {
         font-size: 1.1em;
-        text-transform: uppercase;
     }
 }

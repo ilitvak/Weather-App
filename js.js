@@ -43,9 +43,10 @@ function searchWeather() {
     // API key from website
     var apiKey = "8afd931381e00062465cd0cc299c2270";
     
-    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&units=metric&appid=" + apiKey;
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&units=standard&appid=" + apiKey;
     
     var method = "GET";
+    
     http.open(method, url);
     
     http.onreadystatechange = function(){
@@ -80,7 +81,7 @@ function updateWeather(weatherData) {
         indicatorHot.style.display = 'none';
     }
     
-    if(weatherData.temperature > 30) {
+    if(weatherData.temperature > 20) {
         sound.stop();
         indicatorCold.style.display = 'none';
         indicatorHot.style.display = 'block';
