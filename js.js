@@ -75,13 +75,13 @@ function updateWeather(weatherData) {
     loadingText.style.display = 'none';
     weather.style.display = "block";
 
-    if(weatherData.temperature < 20) {
+    if(weatherData.temperature < 40) {
         sound.play();
         indicatorCold.style.display = 'block';
         indicatorHot.style.display = 'none';
     }
     
-    if(weatherData.temperature > 20) {
+    if(weatherData.temperature > 40) {
         sound.stop();
         indicatorCold.style.display = 'none';
         indicatorHot.style.display = 'block';

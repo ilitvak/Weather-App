@@ -32,14 +32,16 @@ header {
     font-size: calc(1.4em + 2.5vw);
     text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
     color: #fff; }
-  header i.fa-thermometer-2 {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 1%;
-    color: #ffffff;
-    font-size: calc(1em + 2.2vw);
-    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
+  header i {
+    height: auto; }
+    header i.fa-thermometer-2 {
+      display: inline-block;
+      width: 20px;
+      height: auto;
+      margin-left: 1%;
+      color: #ffffff;
+      font-size: calc(1em + 2.2vw);
+      text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
 
 /* ---------------------------- */
 /* Main Weather Section */
@@ -48,14 +50,18 @@ main {
   text-align: center;
   padding-top: 80px; }
   main #search label {
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 20px; }
   main #search input {
+    width: 20%;
     border-bottom: 2px solid #000;
-    font-size: inherit;
-    font-family: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial;
     outline: none; }
     main #search input:focus {
-      outline: none; }
+      outline: none;
+      border-bottom: 2px solid #099FFF; }
   main #search button {
     padding: 5px;
     border: 1px solid;
@@ -70,6 +76,20 @@ main {
     outline: none; }
     main #search button:hover {
       background-image: linear-gradient(278deg, #00C4CC 0%, #7D2AE8 100%); }
+  main #load {
+    display: none;
+    width: 500px;
+    padding: 30px;
+    margin: 100px auto auto; }
+  main #weather h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 32px; }
+  main #weather #weatherDescription {
+    text-transform: uppercase;
+    float: left; }
+  main #weather #weatherTemperature {
+    float: right; }
   main #weather, main .indicatorCold, main .indicatorHot {
     display: none;
     padding: 30px;
@@ -80,5 +100,54 @@ main {
     font-weight: bold;
     color: #fff;
     background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%); }
+  main .indicatorCold, main .indicatorHot {
+    margin-top: 0; }
+  main .indicatorCold > div, main .indicatorHot > div {
+    display: inline-block; }
+  main .indicatorHot i.fa-sun-o {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    margin-left: 1%;
+    color: yellow;
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
+  main .indicatorCold i.fa-snowflake-o {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    margin-left: 1%;
+    color: yellow;
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
+
+/* ---------------------------- */
+/* Media Queries */
+/* ---------------------------- */
+@media only screen and (max-width: 480px) {
+  header h1, header i.fa-thermometer-2 {
+    font-size: 2.5em; }
+
+  main #search {
+    max-width: 90%;
+    margin: 0 auto; }
+    main #search label {
+      display: block;
+      font-size: 1.8em; }
+    main #search input {
+      display: block;
+      width: 90%;
+      margin: 4% auto 8%;
+      font-size: 1.2em;
+      text-transform: uppercase; }
+    main #search button {
+      padding: 2.2%;
+      font-size: 1.4em; }
+  main #load {
+    width: auto; }
+  main #weather, main .indicatorCold, main .indicatorHot {
+    width: 100%; }
+  main #weather #weatherDescription, main #weather #weatherTemperature {
+    font-size: 1.1em; }
+  main .indicatorCold, main .indicatorHot {
+    margin-bottom: 0; } }
 
 /*# sourceMappingURL=scss.css.map */
