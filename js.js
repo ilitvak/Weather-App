@@ -74,6 +74,8 @@ function searchWeather() {
 }
 
 function updateWeather(weatherData) {    
+    
+    // resets thermometers classes on button click
     indicatorColdIcon.className = "fa fa-thermometer-";
     indicatorHotIcon.className = "fa fa-thermometer-";
     
@@ -84,15 +86,16 @@ function updateWeather(weatherData) {
     loadingText.style.display = 'none';
     weather.style.display = "block";
 
-    if(weatherData.temperature <= 59) {
+    if(weatherData.temperature <= 59 && weatherData.temperature >= 31) {
+        sound.play();
         indicatorCold.style.display = "block";
         indicatorColdIcon.className += 'half';
-        indicatorCold.firstElementChild.textContent = 'It\'s cold out. Wear a jacket.';
+        indicatorCold.firstElementChild.textContent = 'It\'s kinda chilly. Wear a lighter Jacket.';
 
         indicatorHot.style.display = 'none';
     }
     
-    else if(weatherData.temperature <= 30) {
+    else if(weatherData.temperature <= 30 && weatherData.temperature >= 11) {
         sound.play();
         indicatorCold.style.display = 'block';
         indicatorColdIcon.className += 'quarter';
@@ -110,13 +113,13 @@ function updateWeather(weatherData) {
         indicatorHot.style.display = 'none';
     }
     
-    else if(weatherData.temperature >= 60) {
+    else if(weatherData.temperature >= 60 && weatherData.temperature <= 79) {
         sound.stop();
         indicatorCold.style.display = 'none';
         
         indicatorHot.style.display = 'block';
         indicatorHotIcon.className += 'three-quarters';
-        indicatorHot.firstElementChild.textContent = "Go Outside! Its hot af! Get a Tan";
+        indicatorHot.firstElementChild.textContent = "Weather is getting warm. Go Play.";
         
     }
     
@@ -126,6 +129,7 @@ function updateWeather(weatherData) {
         
         indicatorHot.style.display = 'block';
         indicatorHotIcon.className += 'full';
+        indicatorHot.firstElementChild.textContent = "Go Outside! Its hot af! Get a Tan.";
     }
 }
     
