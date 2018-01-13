@@ -1,18 +1,15 @@
 # Weather-App
 
-Weather App that helps you find out if it's cold or hot outside. Try it today!
+Weather App that uses openweather.org's API to retrieve real-time data about the city of your choice. Buzz.js is used to alert users if the temperature is too cold. 
 
 ## Built With 
 
 * HTML5
-* CSS3
+* SCSS compiled to CSS
 * Vanilla JavaScript
 * Open Weather API
-& Buzz.js
+* Buzz.js
 * Love
-
-## Link To Site
-
 
 Screenshots
 -----------
