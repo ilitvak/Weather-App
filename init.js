@@ -10,4 +10,8 @@ var weatherDesc = document.querySelector("#weatherDescription");
 var weatherTemp = document.querySelector("#weatherTemperature");
 
 var indicatorCold = document.querySelector('.indicatorCold');
+var indicatorColdIcon = document.querySelector(".indicatorCold i");
+
 var indicatorHot = document.querySelector('.indicatorHot');
+var indicatorHotIcon = document.querySelector(".indicatorHot i");
+

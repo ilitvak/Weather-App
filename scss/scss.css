@@ -9,12 +9,17 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   transition: all .5s;
-  font-family: Helvetica Neue, Helvetica, Arial; }
+  font-family: Helvetica Neue, Helvetica, Arial;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
+  color: #ffffff; }
 
 .clearfix::after {
   content: '';
   clear: both;
   display: block; }
+
+body {
+  background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%); }
 
 /* ---------------------------- */
 /* Header Section */
@@ -22,9 +27,7 @@
 header {
   height: auto;
   padding: 4% 0;
-  background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
-  text-align: center;
-  box-shadow: 3px 3px 3px #ccc; }
+  text-align: center; }
   header h1 {
     display: inline-block;
     margin: 0;
@@ -51,31 +54,34 @@ main {
   padding-top: 80px; }
   main #search label {
     font-weight: bold;
-    font-size: 20px; }
+    font-size: 20px;
+    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
   main #search input {
     width: 20%;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #fff;
     font-weight: bold;
     font-size: 20px;
     font-family: Arial;
-    outline: none; }
+    outline: none;
+    background-color: transparent; }
     main #search input:focus {
-      outline: none;
-      border-bottom: 2px solid #099FFF; }
+      border-bottom: 2px solid #000;
+      outline: none; }
   main #search button {
     padding: 5px;
-    border: 1px solid;
+    border: 1px solid #fff;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     font-family: inherit;
     font-size: inherit;
-    color: #fff;
-    text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%);
+    color: #000;
+    text-shadow: none;
+    background-color: #fff;
     outline: none; }
     main #search button:hover {
-      background-image: linear-gradient(278deg, #00C4CC 0%, #7D2AE8 100%); }
+      background-image: linear-gradient(278deg, #00C4CC 0%, #7D2AE8 100%);
+      border: 1px solid linear-gradient(139deg, #00C4CC 0%, #7D2AE8 100%); }
   main #load {
     display: none;
     width: 500px;
@@ -104,20 +110,30 @@ main {
     margin-top: 0; }
   main .indicatorCold > div, main .indicatorHot > div {
     display: inline-block; }
-  main .indicatorHot i.fa-sun-o {
-    display: inline-block;
-    width: 20px;
+  main .indicatorHot i {
+    width: 2px;
     height: auto;
     margin-left: 1%;
-    color: yellow;
+    font-size: 30px;
+    color: #fff;
     text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
-  main .indicatorCold i.fa-snowflake-o {
-    display: inline-block;
-    width: 20px;
+    main .indicatorHot i.fa-thermometer-full {
+      display: inline-block; }
+    main .indicatorHot i.fa-thermometer-three-quarters {
+      display: inline-block; }
+  main .indicatorCold i {
+    width: 2px;
     height: auto;
     margin-left: 1%;
-    color: #00FFFF;
+    font-size: 30px;
+    color: #fff;
     text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4); }
+    main .indicatorCold i.fa-thermometer-half {
+      display: inline-block; }
+    main .indicatorCold i.fa-thermometer-quarter {
+      display: inline-block; }
+    main .indicatorCold i.fa-thermometer-empty {
+      display: inline-block; }
 
 /* ---------------------------- */
 /* Media Queries */

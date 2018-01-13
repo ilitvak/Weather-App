@@ -65,9 +65,18 @@ function searchWeather() {
     };
   
     http.send();
+    
+    // Reset ClassName for next iteration of thermometers
+    
+    indicatorColdIcon.classList.remove("empty");
+    indicatorColdIcon.classList.remove("half");
+    indicatorColdIcon.classList.remove("quarter");
 }
 
-function updateWeather(weatherData) {
+function updateWeather(weatherData) {    
+    indicatorColdIcon.className = "fa fa-thermometer-";
+    indicatorHotIcon.className = "fa fa-thermometer-";
+    
     weatherCity.textContent = weatherData.cityName; 
     weatherDescription.textContent = weatherData.description;
     weatherTemp.textContent = weatherData.temperature + " Deg F.";
@@ -75,16 +84,48 @@ function updateWeather(weatherData) {
     loadingText.style.display = 'none';
     weather.style.display = "block";
 
-    if(weatherData.temperature < 40) {
-        sound.play();
-        indicatorCold.style.display = 'block';
+    if(weatherData.temperature <= 59) {
+        indicatorCold.style.display = "block";
+        indicatorColdIcon.className += 'half';
+        indicatorCold.firstElementChild.textContent = 'It\'s cold out. Wear a jacket.';
+
         indicatorHot.style.display = 'none';
     }
     
-    if(weatherData.temperature > 40) {
+    else if(weatherData.temperature <= 30) {
+        sound.play();
+        indicatorCold.style.display = 'block';
+        indicatorColdIcon.className += 'quarter';
+        indicatorCold.firstElementChild.textContent = 'It/s cold out. Wear a jacket.';
+        
+        indicatorHot.style.display = 'none';
+    }
+    
+    else if(weatherData.temperature <= 10) {
+        sound.play();
+        indicatorCold.style.display = 'block';
+        indicatorColdIcon.className += 'empty';
+        indicatorCold.firstElementChild.textContent = "Do not. I repeat. Do Not Go Outside!";
+        
+        indicatorHot.style.display = 'none';
+    }
+    
+    else if(weatherData.temperature >= 60) {
         sound.stop();
         indicatorCold.style.display = 'none';
+        
         indicatorHot.style.display = 'block';
+        indicatorHotIcon.className += 'three-quarters';
+        indicatorHot.firstElementChild.textContent = "Go Outside! Its hot af! Get a Tan";
+        
+    }
+    
+    else if(weatherData.temperature >= 80) {
+        sound.stop();
+        indicatorCold.style.display = 'none';
+        
+        indicatorHot.style.display = 'block';
+        indicatorHotIcon.className += 'full';
     }
 }
     
