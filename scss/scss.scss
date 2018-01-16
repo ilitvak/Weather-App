@@ -260,21 +260,19 @@ main {
                 font-size: 1.4em;
             }
         }
-            width: auto;
-        }
+    }
         
-        #weather, .indicatorCold, .indicatorHot {
-            width: 100%;
-        }
+    #weather, .indicatorCold, .indicatorHot {
+        width: 100%;
+    }
         
-        #weather {
-            #weatherDescription, #weatherTemperature {
-                font-size: 1.1em;
-            }
+    #weather {
+        #weatherDescription, #weatherTemperature {
+            font-size: 1.1em;
         }
+    }
         
-        .indicatorCold, .indicatorHot {
-            margin-bottom: 0;
-        }
+    .indicatorCold, .indicatorHot {
+        margin-bottom: 0;
     }
 }
