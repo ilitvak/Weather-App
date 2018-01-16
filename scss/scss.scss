@@ -69,7 +69,7 @@ header {
 
 main {
     text-align: center;
-    padding-top: 80px;
+    margin-top: 80px;
     
     #search {
         label {
@@ -143,7 +143,7 @@ main {
         padding: 30px;
         width: 500px;
         border: 1px solid #ccc;
-        margin: 100px auto 50px;
+        margin: 50px auto 50px;
         box-shadow: 0em 0.2em 1em rgba(0, 0, 0, 0.8);
         font-weight: bold;
         color: #fff;
@@ -192,6 +192,43 @@ main {
 /* Media Queries */
 /* ---------------------------- */
 
+/*Big tablet to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    
+    header {
+        h1 {
+            font-size: calc(2.2em + 2.5vw);
+        }
+        
+        i.fa-thermometer-2 {
+            font-size: calc(1.6em + 2.2vw);
+        }
+    }
+}
+
+/* Small tablet to big tablet: from 763px to 1023px */
+@media only screen and (max-width: 1023px) {
+    
+    header h1 {
+        font-size: calc(2em + 3vw);
+    }
+}
+
+/* Small phones to small tablets from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    
+    header {
+        h1 {
+            font-size: calc(2.5em + 3vw);
+        }
+        
+        i.fa-thermometer-2 {
+            font-size: calc(2em + 2.2vw);
+        }
+    }
+}
+
+/* Small phones from 0 to 480px */
 @media only screen and (max-width: 480px) {
     
     header {
@@ -223,8 +260,6 @@ main {
                 font-size: 1.4em;
             }
         }
-        
-        #load {
             width: auto;
         }
         
@@ -242,7 +277,4 @@ main {
             margin-bottom: 0;
         }
     }
-    
-    
-    
 }

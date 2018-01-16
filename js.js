@@ -8,7 +8,7 @@ var sound = new buzz.sound("brr", {
     formats: [ "mp3" ],
     preload: true,
     autoplay: false,
-    loop: true
+    loop: false
 });
 
 buzz.defaults.autoplay = true;
@@ -43,7 +43,7 @@ function searchWeather() {
     // API key from website
     var apiKey = "8afd931381e00062465cd0cc299c2270";
     
-    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&units=standard&appid=" + apiKey;
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + cityName + "&units=imperial&appid=" + apiKey;
     
     var method = "GET";
     
@@ -99,7 +99,7 @@ function updateWeather(weatherData) {
         sound.play();
         indicatorCold.style.display = 'block';
         indicatorColdIcon.className += 'quarter';
-        indicatorCold.firstElementChild.textContent = 'It/s cold out. Wear a jacket.';
+        indicatorCold.firstElementChild.textContent = 'It\'s cold out. Wear a jacket.';
         
         indicatorHot.style.display = 'none';
     }
