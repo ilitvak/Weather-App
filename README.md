@@ -3,6 +3,11 @@ Weather-App
 
 Weather App that uses openweather.org's API to retrieve real-time data about the city of your choice. Buzz.js is used to alert users if the temperature is too cold. 
 
+View Weather-App
+================
+
+[Weather-App](https://ilitvak.github.io/Weather-App/)
+
 Built With
 ----------
 
